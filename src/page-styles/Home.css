@@ -1,0 +1,38 @@
+
+/* App.css */
+/* ... (previous CSS styles) */
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .text {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .header {
+    font-size: 60px;
+    font-size: bold;
+  }
+
+  .content {
+    font-size: 24px;
+  }
+  
+  .mission-image {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .mission-image img {
+    max-width: 80%;
+    height: auto;
+  }
+  
+  /* ... (rest of the CSS styles) */
+  
