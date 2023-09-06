@@ -21,8 +21,7 @@ body {
   align-items: center;
   gap: 2rem;
   padding: 0 2rem;
-  font-weight: bold;
-
+  font-weight: lighter;
 }
 
 .nav ul {
@@ -35,7 +34,8 @@ body {
   color: inherit;
   text-decoration: none;
   font-family: "Exo", sans-serif;
-  font-size: 30px;
+  font-size: 1.5rem;
+  
 }
 
 .nav li:hover {

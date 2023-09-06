@@ -2,26 +2,20 @@
 /* App.css */
 /* ... (previous CSS styles) */
 
+/** Section **/
 .section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    padding-top: 3%;
+    padding-bottom: 3%;
     background-color: #f5f5f5;
   }
   
   .text {
     flex: 1;
     padding: 20px;
-  }
-
-  .header {
-    font-size: 60px;
-    font-size: bold;
-  }
-
-  .content {
-    font-size: 24px;
   }
   
   .mission-image {
@@ -36,18 +30,19 @@
   /* DIVISIONS */
 
   .homepage-section {
-    padding: 20px;
+    padding: 1%;
+    background-color: gold;
   }
   
   .columns {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 1%;
   }
   
   .column {
     flex: 1;
-    padding: 20px;
+    padding: 1%;
   }
   
   .column img {
@@ -55,6 +50,5 @@
     height: auto;
   }
   
-
   
   

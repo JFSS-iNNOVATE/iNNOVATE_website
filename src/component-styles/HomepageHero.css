@@ -29,12 +29,17 @@
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  /*font-size: 36px;*/
+  background-color: black;
+  padding-right: 3%;
+  padding-left: 3%;
+  padding-top: 1%;
+  opacity: 80%;
+  border-radius: 10px;
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 6rem;
   margin-top: 0;
   font-family: 'Exo', sans-serif;
-  font-weight: bold;
+  font-weight: normal;
 }

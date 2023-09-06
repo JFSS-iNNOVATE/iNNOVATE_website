@@ -37,7 +37,7 @@ const Home = () => {
 
                 <div className="column">
                     <div className="subtitle-centered">Senior</div>
-                    <div className="image-centered"><img src={seniorimg} alt="Senior Division" /></div>
+                    <div className="image-centered sized-image"><img src={seniorimg} alt="Senior Division" /></div>
                     <div className="description">Develop and strengthen essential tech skills required for the industry. Join us and stand out on post-secondary applications.</div>
                     <div className="subtitle-centered"><button class="button-31">Sign Up</button></div>
                 </div>
