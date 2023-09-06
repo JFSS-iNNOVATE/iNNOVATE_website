@@ -30,8 +30,31 @@
   }
   
   .mission-image img {
-    max-width: 80%;
+    width: 100%;
   }
   
-  /* ... (rest of the CSS styles) */
+  /* DIVISIONS */
+
+  .homepage-section {
+    padding: 20px;
+  }
+  
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .column img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  
   
