@@ -2,6 +2,8 @@ import React from "react";
 import Hero from "../components/HomepageHero"
 import image from "../images/mission.png"
 import '../page-styles/Home.css'
+import '../data/text.css'
+import data from "../data/text-data.json"
 
 const Home = () => {
     return (
@@ -9,14 +11,13 @@ const Home = () => {
         <Hero />
         <div className="section">
             <div className="text">
-                <div className="header">Our Mission:</div>
-                <div className="content">
-                Our mission is to inspire, educate, and empower the next generation of technology leaders. Through accessible materials, resources, and online sessions, our organisation aims to iNNOVATE students.
-
+                <div className={data.Home["Our Mission"][0].type}>{data.Home["Our Mission"][0].content}</div>
+                <div className={data.Home["Our Mission"][1].type}>
+                    {data.Home["Our Mission"][1].content}
                 </div>
             </div>
             <div className="mission-image">
-                <img src={image} alt="Our Mission Image" />
+                <img src={image} alt="Our Mission" />
             </div>
         </div>
     </div>

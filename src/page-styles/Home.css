@@ -26,12 +26,11 @@
   
   .mission-image {
     flex: 1;
-    margin-left: 20px;
+    margin-left: 5%;
   }
   
   .mission-image img {
     max-width: 80%;
-    height: auto;
   }
   
   /* ... (rest of the CSS styles) */

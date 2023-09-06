@@ -1,0 +1,14 @@
+{
+    "Home" : {
+        "Our Mission" : [
+            {
+                "type" : "subtitle",
+                "content" : "Our Mission"
+            },
+            {
+                "type" : "description",
+                "content" : "Our mission is to inspire, educate, and empower the next generation of technology leaders. Through accessible materials, resources, and online sessions, our organisation aims to iNNOVATE students."
+            }
+        ]
+    }
+}
