@@ -5,8 +5,9 @@
 /** Section **/
 .section {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px;
     padding-top: 3%;
     padding-bottom: 3%;
@@ -26,8 +27,36 @@
   .mission-image img {
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    .section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .text {
+      padding: 0;
+      padding-bottom: 20px; 
+      padding-right: 0;
+      margin-right: 0;
+    }
+
+    .mission-image {
+      margin-left: 0;
+    }
   
-  /* DIVISIONS */
+    .mission-image img {
+      padding-left: 0;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 3%;
+    }
+  }
+  
+/* DIVISIONS */
 
   .homepage-section {
     padding: 1%;
