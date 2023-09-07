@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   padding: 0 2rem;
   font-weight: bold;
 
@@ -40,4 +40,8 @@ body {
 
 .nav li:hover {
   color: red;
+}
+
+.google-login{
+  padding: 0px;
 }
