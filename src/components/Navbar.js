@@ -2,12 +2,16 @@ import React from "react";
 import "../component-styles/Navbar.css";
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useState } from 'react';
 import jwt_decode from "jwt-decode"
 
+var userObject = {}
 const Navbar = () => {
+    const [user, setUser] = useState({});
     function handleCallback(response) {
-        var userObject = jwt_decode(response.credential)
+        userObject = jwt_decode(response.credential)
         console.log(userObject);
+        setUser(userObject);
       }
     
       useEffect(() => {
@@ -31,9 +35,15 @@ const Navbar = () => {
                 <li><Link to="/Resources">Resources</Link></li>
                 <li><Link to="/Forum">Forums</Link></li>
                 <li><div className="google-login" id="LoginDiv"></div></li>
+                {user && 
+                    <div>
+                       <img src={user.picture} className="pfp"></img>
+                       <h4>{user.name}</h4>
+                    </div>
+                }
             </ul>
         </nav>
     )
 }
 
-export default Navbar;
+export {Navbar, userObject};

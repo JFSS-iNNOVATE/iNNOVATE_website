@@ -45,3 +45,13 @@ body {
 .google-login{
   padding: 0px;
 }
+
+.pfp{
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+
+.user-name{
+  padding: 0px;
+}
