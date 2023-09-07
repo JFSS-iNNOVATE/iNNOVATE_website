@@ -43,3 +43,9 @@
   font-family: 'Exo', sans-serif;
   font-weight: normal;
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+  }
+}
