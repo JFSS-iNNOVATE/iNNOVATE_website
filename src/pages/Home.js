@@ -24,9 +24,9 @@ const Home = () => {
                 <img src={image} alt="Our Mission" />
             </div>
         </div>
-            {/* <div className="homepage-section">
-                <div className="subtitle-centered">Divisions</div>
-                <hr />
+        <div className="homepage-section">
+            <div className="subtitle-centered">Divisions</div>
+            <hr />
             <div className="columns">
                 <div className="column">
                     <div className="subtitle-centered">Junior</div>
@@ -42,7 +42,7 @@ const Home = () => {
                     <div className="subtitle-centered"><button class="button-31">Sign Up</button></div>
                 </div>
             </div>
-        </div> */}
+        </div>
         
     </div>
     )

@@ -11,12 +11,12 @@
 
 .subtitle-centered {
     text-align: center;
-    font-size: 60px;
-    font-size: bold;
+    font-size: 6rem;
+    font-size: normal;
     padding: 5px;
     margin-bottom: 10px;
     font-family: 'Exo', sans-serif;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .description {
@@ -27,6 +27,10 @@
 
 @media (max-width: 355px) {
   .subtitle {
+    font-size: 3rem;
+  }
+
+  .subtitle-centered {
     font-size: 3rem;
   }
 
