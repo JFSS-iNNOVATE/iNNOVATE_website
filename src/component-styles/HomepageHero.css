@@ -46,3 +46,11 @@
     font-size: 4rem;
   }
 }
+
+@media (max-width: 355px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  
+}
