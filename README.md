@@ -1,3 +1,5 @@
+GitHub Pages: https://jfss-innovate.github.io/iNNOVATE_website/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
