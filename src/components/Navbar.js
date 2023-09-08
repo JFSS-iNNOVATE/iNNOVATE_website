@@ -12,20 +12,28 @@ const Navbar = () => {
         userObject = jwt_decode(response.credential)
         console.log(userObject);
         setUser(userObject);
-      }
-    
-      useEffect(() => {
+        document.getElementById("LoginDiv").hidden = true;
+    }
+
+    function signOut() {
+        setUser({});
+        document.getElementById("LoginDiv").hidden = false;
+    }
+
+    useEffect(() => {
         /* global google */
         google.accounts.id.initialize({
-          client_id: "680968852601-6h8k53sd636mg9hfu2eqmvs8vjtg8skj.apps.googleusercontent.com",
-          callback: handleCallback
+            client_id: "680968852601-6h8k53sd636mg9hfu2eqmvs8vjtg8skj.apps.googleusercontent.com",
+            callback: handleCallback
         });
-    
+
         google.accounts.id.renderButton(
-          document.getElementById("LoginDiv"), 
-          {theme: "outline", size: "large"}
+            document.getElementById("LoginDiv"), 
+            {theme: "outline", size: "large"}
         );
-      }, []);
+
+        google.accounts.id.prompt();
+    }, []);
     
     return (
         <nav className="nav">
@@ -35,12 +43,14 @@ const Navbar = () => {
                 <li><Link to="/Resources">Resources</Link></li>
                 <li><Link to="/Forum">Forums</Link></li>
                 <li><div className="google-login" id="LoginDiv"></div></li>
-                {user && 
+                <li>{user.picture &&
                     <div>
                        <img src={user.picture} className="pfp"></img>
-                       <h4>{user.name}</h4>
                     </div>
-                }
+                }</li>
+                <li>{Object.keys(user).length != 0 &&
+                    <li><button onClick={ () => signOut()} className="sign-out" id="pfp">Sign Out</button></li>
+                }</li>
             </ul>
         </nav>
     )

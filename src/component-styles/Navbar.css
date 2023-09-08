@@ -47,11 +47,27 @@ body {
 }
 
 .pfp{
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 100%;
 }
 
 .user-name{
   padding: 0px;
+}
+
+.sign-out{
+  padding: 0px;
+  height: 40px;
+  width: 120px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-family: "Exo", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.sign-out:active {
+  color: red;
 }
