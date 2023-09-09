@@ -1,0 +1,26 @@
+/* Add a margin-top to create space between the navbar and video content */
+.video-container {
+    margin-top: 10%; /* Adjust the margin-top value as needed */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr)); /* Two videos per row */
+    gap: 30px; /* Add some space between columns and rows */
+  }
+  
+  .video-column {
+    text-align: center;
+  }
+  
+  .video-column iframe {
+    width: 70%;
+    height: 200px; /* Adjust the height as needed */
+    display: block;
+    margin: 0 auto; /* Center the video horizontally within the column */
+  }
+  
+  .video-column p {
+    text-align: center; /* Center the description text */
+  }
+  
+  .spacer {
+    margin-bottom: 20%;
+  }
