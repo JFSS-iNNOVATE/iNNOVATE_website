@@ -1,8 +1,5 @@
-@import url('https://fonts.cdnfonts.com/css/exo-4');
-
 .main-container{
     padding-top: 5%;
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -10,26 +7,21 @@
 }
 
 .comment-box{
-    border: 1px;
-    background-color: #FFF5F2; 
-    padding: 5px;
-    width: 75vw;
-    height: 10vh;
-    font-family: "Exo", sans-serif;
-    font-size: 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 5px;
 }
 
-.comments{
-    border: 1px solid black;
+.input-box{
+    height: 10vh;
+    width: 50vw;
+    background-color: #F2ECEA;
+    
+}
+
+.comment-button{
     margin-top: 10px;
-    margin-bottom: 5px;
-    width: 75vw;
-    height: 5vh;
-    font-family: "Exo", sans-serif;
-    font-size: 1.25rem;
+    height: 30px;
+    width: 80px;
 }
 
