@@ -1,9 +1,10 @@
-import React from "react";
-import '../page-styles/Forum.css';
+import { appendFileSync } from "fs";
+
 
 function read_csv(){
     const csv = require('csv-parser');
     const fs = require('fs');
+
 
     fs.createReadStream('.\\src\\pages\\comments.csv')
     .pipe(csv())
@@ -14,7 +15,6 @@ function read_csv(){
     .on('end', () => {
         console.log('CSV file successfully processed');
     });
-
 }
 
 /* ID,Name,Date,ChildID,ParentID,PFP,Comment */ 
@@ -40,20 +40,7 @@ class Comment {
     }
 }
 
-
-const Forum = () => {
-    comments = read_csv();
-    const row = new Comment("1", "2", "", "", "","","","");
-    row.saveAsCSV();
-    return(
-        <div className="main-container">
-            <h1 className="text">Welcome to the forum! Here you can ask questions, share your ideas, or simply just chat!</h1>
-            <div>
-                <input placeholder="Add a comment..." className="comment-box"></input>
-                <button className="comment-button">Comment</button>
-            </div>
-        </div>
-    )
+const startApp = () => {
+    const contact1 = new Comment("2", "Robert", "", "", "","","","");
+    contact1.saveAsCSV();
 }
-
-export default Forum;
