@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import jwt_decode from "jwt-decode"
+import logo from "../images/logo.png"
 
 var userObject = {}
 const Navbar = () => {
@@ -37,7 +38,9 @@ const Navbar = () => {
     
     return (
         <nav className="nav">
-            <div className="logo"><Link to="/">LOGO</Link></div>
+            <div className="logo"><Link to="/">
+                <img src={logo} className="logo"></img>
+            </Link></div>
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/Resources">Resources</Link></li>

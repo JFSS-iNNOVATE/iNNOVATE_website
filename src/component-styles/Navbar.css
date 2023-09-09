@@ -8,6 +8,12 @@ body {
   margin: 0;
 }
 
+.logo {
+  width: 100px;
+  height: 40px;
+}
+
+
 .nav {
   position: fixed;
   top: 0;
