@@ -9,6 +9,10 @@ import seniorimg from '../images/seniorimg.png'
 // import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+    const textBold = {
+        fontWeight: 'bold',
+    };
+
     // const navigate = useNavigate()
     return (
     <div>
@@ -17,7 +21,7 @@ const Home = () => {
             <div className="text">
                 <div className={data.Home["Our Mission"][0].type}>{data.Home["Our Mission"][0].content}</div>
                 <div className={data.Home["Our Mission"][1].type}>
-                Our mission is to inspire, educate, and empower the next generation of technology leaders. Through accessible materials, resources, and online sessions, our organisation aims to <span style={{color: '#3d85c6'}}>iNNOVATE</span> students.
+                Our mission is to inspire, educate, and empower the next generation of technology leaders. Through accessible materials, resources, and online sessions, our organisation aims to <span style={textBold}>iNNOVATE</span> students.
                 </div>
             </div>
             <div className="mission-image">
