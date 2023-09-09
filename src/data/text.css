@@ -17,7 +17,15 @@
     margin-bottom: 10px;
     font-family: 'Exo', sans-serif;
     font-weight: normal;
-    color: white;
+    color: black;
+}
+
+.divisions {
+  text-align: left;
+  padding: 40px;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  color: white;
 }
 
 .description {
@@ -27,9 +35,26 @@
     margin: 0;
 }
 
-.column .description{
+.descriptionWhite {
   color: white;
+  font-weight: lighter;
+  padding: 40px;
+  padding-top: 25px;
+}
+
+hr {
+  width: 95%;
+}
+
+.column .description{
+  color: black;
   margin: auto;
+}
+
+@media (max-width: 690px) {
+  .divisions {
+    text-align: center;
+  }
 }
 
 @media (max-width: 355px) {
@@ -39,6 +64,7 @@
 
   .subtitle-centered {
     font-size: 3rem;
+    text-align: center;
   }
 
   .description {
