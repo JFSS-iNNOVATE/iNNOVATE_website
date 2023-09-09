@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/iNNOVATE_website/static/css/main.46415835.css",
-    "main.js": "/iNNOVATE_website/static/js/main.5f5d45da.js",
+    "main.css": "/iNNOVATE_website/static/css/main.71e34ac7.css",
+    "main.js": "/iNNOVATE_website/static/js/main.c0d06c2b.js",
     "static/media/GettyImages-1047699430.png": "/iNNOVATE_website/static/media/GettyImages-1047699430.f0baf0ca00a837e169ab.png",
     "static/media/mission.png": "/iNNOVATE_website/static/media/mission.10a6fafffc13e0b1b17c.png",
     "static/media/juniorimg.png": "/iNNOVATE_website/static/media/juniorimg.f9e61af172c2524632c6.png",
     "static/media/seniorimg.png": "/iNNOVATE_website/static/media/seniorimg.c460b70ae7a1140c8d5a.png",
     "index.html": "/iNNOVATE_website/index.html",
-    "main.46415835.css.map": "/iNNOVATE_website/static/css/main.46415835.css.map",
-    "main.5f5d45da.js.map": "/iNNOVATE_website/static/js/main.5f5d45da.js.map"
+    "main.71e34ac7.css.map": "/iNNOVATE_website/static/css/main.71e34ac7.css.map",
+    "main.c0d06c2b.js.map": "/iNNOVATE_website/static/js/main.c0d06c2b.js.map"
   },
   "entrypoints": [
-    "static/css/main.46415835.css",
-    "static/js/main.5f5d45da.js"
+    "static/css/main.71e34ac7.css",
+    "static/js/main.c0d06c2b.js"
   ]
 }
