@@ -15,7 +15,7 @@ function Forum() {
     const fetchComments = async () => {
         try {
             const querySnapshot = await getDocs(
-                query(collection(firestore, "comments"), orderBy("createdAt"))
+                query(collection(firestore, "comments"), orderBy("createdAt", "desc"))
               );
             
             // console.log(querySnapshot)
