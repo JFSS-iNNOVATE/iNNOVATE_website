@@ -42,7 +42,8 @@ class Comment {
 
 
 const Forum = () => {
-    comments = read_csv();
+    console.log("hi")
+    // comments = read_csv();
     const row = new Comment("1", "2", "", "", "","","","");
     row.saveAsCSV();
     return(
@@ -57,3 +58,4 @@ const Forum = () => {
 }
 
 export default Forum;
+

@@ -41,7 +41,7 @@ const Navbar = () => {
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/Resources">Resources</Link></li>
-                <li><Link to="/Forum">Forums</Link></li>
+                <li><Link to="https://sites.google.com/view/innovate-forums/home">Forums</Link></li>
                 <li><div className="google-login" id="LoginDiv"></div></li>
                 <li>{user.picture &&
                     <div>
