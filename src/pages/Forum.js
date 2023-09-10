@@ -129,6 +129,20 @@ function Forum() {
     }
   };
   
+  const formatDate = (timestamp) => {
+    const date = new Date(timestamp.seconds * 1000);
+
+    // Options for formatting the date
+    const options = {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+    };
+
+    return date.toLocaleDateString('en-US', options);
+  };
 
   return (
     <div className='main-container'>
@@ -151,7 +165,7 @@ function Forum() {
                     <div className='comments'>
                         <div className='user-info'>
                             <img src={comment.pfp} className="pfp"></img>
-                            <p className='username'>{comment.username}</p>
+                            <p className='username'>{comment.username} &emsp;<span className='date-posted'>{formatDate(comment.createdAt)}</span></p>
                         </div>
                         <p className='comment-box'>{comment.text}</p>
                         <div className='reply-box'>
@@ -176,7 +190,7 @@ function Forum() {
                             <div className='replies'>
                                 <div className='user-info'>
                                     <img src={reply.pfp} className="pfp"></img>
-                                    <p className='username'>{reply.username}</p>
+                                    <p className='username'>{comment.username} &emsp;<span className='date-posted'>{formatDate(comment.createdAt)}</span></p>
                                 </div>
                                 <p className='comment-box'>{reply.text}</p>
                             </div>

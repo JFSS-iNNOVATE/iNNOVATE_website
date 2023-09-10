@@ -1,11 +1,11 @@
 .main-container{
-    padding-top: 5%;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     background-color: white;
-    padding-bottom: 25vh;
+    padding-bottom: 250px;
 }
 
 .comment-box{
@@ -80,4 +80,12 @@
     margin-top: 10px;
     width: 70vw;
     padding-left: 5vw;
+}
+
+.username {
+    font-size: 1rem;
+}
+.date-posted {
+    font-size: 0.9rem;
+    color: gray;
 }
