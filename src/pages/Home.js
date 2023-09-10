@@ -31,7 +31,7 @@ const Home = () => {
         <div className="divisionSection">
             <div className="subtitle-centered divisions">Divisions</div>
             <hr />
-            <div className="description descriptionWhite"><span style={textBold}>iNNOVATE</span> offers two divisions: Junior and Senior. The Junior division consists of trained high school mentors to conduct free learning sessions with students grades 6-8 once a week. The Senior division coaches high schoolers skills to prepare them for the technology industry.</div>
+            <div className="description descriptionWhite"><span style={textBold}>iNNOVATE</span> offers two divisions: Junior and Senior. Our Junior division consists of trained high school mentors to conduct free learning sessions with students grades 6-8 once a week. Our Senior division coaches high schoolers skills required for the technology industry.</div>
         </div>
         <div className="homepage-section">
             <div className="columns">
@@ -39,14 +39,14 @@ const Home = () => {
                     <div className="subtitle-centered">Junior</div>
                     <div className="image-centered sized-image"><img src={juniorimg} alt="Junior Division" /></div>
                     <div className="description divisionText">Learn a programming language, 3D-modelling, and other tech savvy skills, for free by our trained mentors!</div>
-                    <button class="button-31">Sign Up</button>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeu9xpfmcuxoBJMSsA8PwJJtTBrjps26QavMhzXUSwst7YsQQ/viewform?usp=sf_link" target="_blank"><button class="button-31">Sign Up</button></a>
                 </div>
 
                 <div className="column">
                     <div className="subtitle-centered">Senior</div>
                     <div className="image-centered sized-image"><img src={seniorimg} alt="Senior Division" /></div>
                     <div className="description divisionText">Develop and strengthen essential tech skills required for the industry. Join us and stand out on post-secondary applications.</div>
-                    <button class="button-31">Sign Up</button>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScAZ7mSGm1qrndee_lVNOCgZIorNiZiQdhK814mXEDxdWTrvg/viewform?usp=sf_link" target="_blank"><button class="button-31">Sign Up</button></a>
                 </div>
             </div>
         </div>
