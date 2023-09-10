@@ -12,15 +12,27 @@
     flex-direction: column;
     align-items: flex-start;
     border: 1px solid black;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
     height: 10vh;
     width: 75vw;
+    resize: none;
 }
 
 .input-box{
     height: 10vh;
     width: 75vw;
     background-color: #F2ECEA;
-    padding: 0px;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    resize: none;
     
 }
 
@@ -30,12 +42,16 @@
     height: 20px;
     width: 105px;
     margin-bottom: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 
 .reply-button{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    border-radius: 25px;
+    margin-top: 10px;
 }
 
 .user-info{
@@ -49,9 +65,18 @@
     height: 10vh;
     width: 75vw;
     background-color: #F2ECEA;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    resize: none;
 }
 
 .replies{
+    margin-top: 10px;
     width: 70vw;
     padding-left: 5vw;
 }

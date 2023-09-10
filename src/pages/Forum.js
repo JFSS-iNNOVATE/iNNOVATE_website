@@ -3,6 +3,7 @@ import { firestore } from '../firebase'; // Adjust the path to your firebase.js 
 import { addDoc, collection, doc, getDoc, getDocs, query, orderBy} from "firebase/firestore";
 import {userObject} from '../components/Navbar'
 import "../page-styles/Forum.css";
+import default_pfp from '../images/default_pfp.png'
 
 function Forum() {
   const [comments, setComments] = useState([]);
@@ -62,7 +63,7 @@ function Forum() {
     var user_pfp
     if (! userObject.name){
         username = "Guest User"
-        user_pfp = ""
+        user_pfp = default_pfp
     }
     else{
         username =  userObject.name
@@ -101,7 +102,7 @@ function Forum() {
         var user_pfp
         if (! userObject.name){
             username = "Guest User"
-            user_pfp = ""
+            user_pfp = default_pfp
         }
         else{
             username =  userObject.name
@@ -139,6 +140,7 @@ function Forum() {
           placeholder="Add your comment"
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
+          maxLength={1024}
         />
         <button onClick={handleAddComment} className='comment-button' id="AddComment">Add Comment</button>
       </div>
@@ -161,6 +163,7 @@ function Forum() {
                                 hidden="hidden"
                                 value={newReply}
                                 onChange={(e) => setNewReply(e.target.value)}
+                                maxLength={1024}
                             />
                             <button onClick={replyComment} id={comment.createdAt} className='reply-button'>Reply</button>
                         </div>
