@@ -89,6 +89,12 @@ body {
   margin-top: 5px;
 }
 
-@media(max-width: 560px) {
+.menu {
+  flex-direction: column;
+}
 
+.menuList {
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
