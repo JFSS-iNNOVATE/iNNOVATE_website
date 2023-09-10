@@ -171,7 +171,7 @@ function Forum() {
                     <div key={reply.id}>
                         {reply.parentID == comment.createdAt &&
                             <div className='replies'>
-                                <div className='User-info'>
+                                <div className='user-info'>
                                     <img src={reply.pfp} className="pfp"></img>
                                     <p className='username'>{reply.username}</p>
                                 </div>
