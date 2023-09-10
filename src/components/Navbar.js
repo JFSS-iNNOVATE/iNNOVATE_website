@@ -38,12 +38,12 @@ const Navbar = () => {
     
     return (
         <nav className="nav">
-            <div className="logo"><Link to="/"><img src={iNNOVATELogo}/></Link></div>
+            <div className="logoContainer"><Link to="/"><img className="logo" src={iNNOVATELogo}/></Link></div>
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/Resources">Resources</Link></li>
                 <li><Link to="/Forum">Forums</Link></li>
-                <li><div className="google-login" id="LoginDiv"></div></li>
+                {/* <li><div className="google-login" id="LoginDiv"></div></li>
                 <li>{user.picture &&
                     <div>
                        <img src={user.picture} className="pfp"></img>
@@ -51,7 +51,7 @@ const Navbar = () => {
                 }</li>
                 <li>{Object.keys(user).length != 0 &&
                     <li><button onClick={ () => signOut()} className="sign-out" id="pfp">Sign Out</button></li>
-                }</li>
+                }</li> */}
             </ul>
         </nav>
     )
