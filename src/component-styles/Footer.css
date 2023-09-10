@@ -29,3 +29,7 @@ footer {
   footer a:hover {
     color: grey;
   }
+
+  .firstFooter {
+    margin-top: 0px;
+  }
