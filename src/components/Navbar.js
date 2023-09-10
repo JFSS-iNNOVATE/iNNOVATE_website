@@ -3,7 +3,8 @@ import "../component-styles/Navbar.css";
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import jwt_decode from "jwt-decode"
+import jwt_decode from "jwt-decode";
+import iNNOVATELogo from '../images/iNNOVATELogo.png'
 
 var userObject = {}
 const Navbar = () => {
@@ -37,7 +38,7 @@ const Navbar = () => {
     
     return (
         <nav className="nav">
-            <div className="logo"><Link to="/">LOGO</Link></div>
+            <div className="logo"><Link to="/"><img src={iNNOVATELogo}/></Link></div>
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/Resources">Resources</Link></li>
