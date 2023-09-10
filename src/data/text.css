@@ -54,6 +54,7 @@ hr {
 @media (max-width: 690px) {
   .divisions {
     text-align: center;
+    font-size: 5rem;
   }
 }
 
@@ -69,6 +70,10 @@ hr {
 
   .description {
     font-size: 1rem;
+  }
+
+  .divisions {
+    font-size: 3rem;
   }
 }
 
