@@ -1,27 +1,91 @@
 .main-container{
-    padding-top: 5%;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    background-color: white;
+    padding-bottom: 250px;
 }
 
 .comment-box{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    height: 10vh;
+    width: 75vw;
+    resize: none;
 }
 
 .input-box{
     height: 10vh;
-    width: 50vw;
+    width: 75vw;
     background-color: #F2ECEA;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    resize: none;
     
 }
 
 .comment-button{
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    width: 105px;
+    margin-bottom: 15px;
     margin-top: 10px;
-    height: 30px;
-    width: 80px;
+    border-radius: 10px;
 }
 
+.reply-button{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    gap: 10px; 
+}
+
+.reply-input-box{
+    height: 10vh;
+    width: 75vw;
+    background-color: #F2ECEA;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    resize: none;
+}
+
+.replies{
+    margin-top: 10px;
+    width: 70vw;
+    padding-left: 5vw;
+}
+
+.username {
+    font-size: 1rem;
+}
+.date-posted {
+    font-size: 0.9rem;
+    color: gray;
+}
