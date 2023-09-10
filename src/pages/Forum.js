@@ -5,6 +5,8 @@ import {userObject} from '../components/Navbar'
 import "../page-styles/Forum.css";
 
 function Forum() {
+    console.log("hi")
+    console.log(userObject)
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
 
@@ -30,43 +32,61 @@ function Forum() {
   }, [newComment]);
 
   const handleAddComment = async () => {
+    var username 
+    var user_pfp
     if (! userObject.name){
-        function handleCallback(response) {
-            userObject = jwt_decode(response.credential)
-            console.log(userObject);
-            setUser(userObject);
-            document.getElementById("LoginDiv").hidden = true;
-        }
-
-        /* global google */
-        google.accounts.id.initialize({
-            client_id: "680968852601-6h8k53sd636mg9hfu2eqmvs8vjtg8skj.apps.googleusercontent.com",
-            callback: handleCallback
-        });
-
-        google.accounts.id.renderButton(
-            document.getElementById("LoginDiv"), 
-            {theme: "outline", size: "large"}
-        );
-
-        useGoogleLogin()
+        username = "Guest User"
+        user_pfp = ""
     }
     else{
-        try {
-            const commentsRef = collection(firestore, "comments")
-            console.log(commentsRef)
-            await addDoc(commentsRef, {
-              text: newComment,
-              createdAt: new Date(),
-              parentID: "",
-              username: userObject.name,
-              pfp: userObject.picture,
-            });
-            setNewComment('');
-          } catch (error) {
-            console.error('Error adding comment to Firestore:', error);
-          }
+        username =  userObject.name
+        user_pfp =  userObject.picture
     }
+
+    try {
+        const commentsRef = collection(firestore, "comments")
+        console.log(commentsRef)
+        await addDoc(commentsRef, {
+            text: newComment,
+            createdAt: new Date(),
+            parentID: "",
+            username: username,
+            pfp: user_pfp,
+        });
+        setNewComment('');
+        } catch (error) {
+        console.error('Error adding comment to Firestore:', error);
+        }
+    
+  };
+
+  const replyComment = async (id) => {
+    var username 
+    var user_pfp
+    if (! userObject.name){
+        username = "Guest User"
+        user_pfp = ""
+    }
+    else{
+        username =  userObject.name
+        user_pfp =  userObject.picture
+    }
+
+    try {
+        const commentsRef = collection(firestore, "comments")
+        console.log(commentsRef)
+        await addDoc(commentsRef, {
+            text: newComment,
+            createdAt: new Date(),
+            parentID: "",
+            username: username,
+            pfp: user_pfp,
+        });
+        setNewComment('');
+        } catch (error) {
+        console.error('Error adding comment to Firestore:', error);
+        }
+    
   };
   
 
@@ -81,12 +101,17 @@ function Forum() {
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
         />
-        <button onClick={handleAddComment} className='comment-button'>Add Comment</button>
+        <button onClick={handleAddComment} className='comment-button' id="AddComment">Add Comment</button>
       </div>
       <div>
         {comments.map((comment) => (
-          <div key={comment.id}>
+          <div key={comment.id} className='comment'>
+            <div className='user-info'>
+                <img src={comment.pfp} className="pfp"></img>
+                <p className='username'>{comment.username}</p>
+            </div>
             <p className='comment-box'>{comment.text}</p>
+            <button onClick={replyComment(comment.id)} className='reply-button'>Reply</button>
           </div>
         ))}
       </div>

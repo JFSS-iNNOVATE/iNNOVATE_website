@@ -10,18 +10,34 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    border: 1px solid black;
+    height: 10vh;
+    width: 75vw;
 }
 
 .input-box{
     height: 10vh;
-    width: 50vw;
+    width: 75vw;
     background-color: #F2ECEA;
     
 }
 
 .comment-button{
-    margin-top: 10px;
-    height: 30px;
-    width: 80px;
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    width: 105px;
+    margin-bottom: 15px;
+}
+
+.reply-button{
+    margin-bottom: 10px;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    gap: 10px; 
 }
 
