@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    background-color: white;
 }
 
 .comment-box{
@@ -19,6 +20,7 @@
     height: 10vh;
     width: 75vw;
     background-color: #F2ECEA;
+    padding: 0px;
     
 }
 
@@ -31,6 +33,8 @@
 }
 
 .reply-button{
+    display: flex;
+    flex-direction: column;
     margin-bottom: 10px;
 }
 
@@ -41,3 +45,13 @@
     gap: 10px; 
 }
 
+.reply-input-box{
+    height: 10vh;
+    width: 75vw;
+    background-color: #F2ECEA;
+}
+
+.replies{
+    width: 70vw;
+    padding-left: 5vw;
+}

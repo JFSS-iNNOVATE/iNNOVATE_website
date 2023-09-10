@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { firestore } from '../firebase'; // Adjust the path to your firebase.js file
-import { addDoc, collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, getDocs, query, orderBy} from "firebase/firestore";
 import {userObject} from '../components/Navbar'
 import "../page-styles/Forum.css";
 
 function Forum() {
-    console.log("hi")
-    console.log(userObject)
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
+  const [reply, setReply] = useState([]);
+  const [newReply, setNewReply] = useState('');
 
   useEffect(() => {
     // Fetch comments from Firestore
     const fetchComments = async () => {
         try {
-            const querySnapshot = await getDocs(collection(firestore, "comments"))
+            const querySnapshot = await getDocs(
+                query(collection(firestore, "comments"), orderBy("createdAt"))
+              );
+            
             // console.log(querySnapshot)
             const commentsData = []
             querySnapshot.forEach((doc) => {
@@ -31,6 +34,29 @@ function Forum() {
     fetchComments();
   }, [newComment]);
 
+  useEffect(() => {
+    // Fetch comments from Firestore
+    const fetchReply = async () => {
+        try {
+            const querySnapshot = await getDocs(
+                query(collection(firestore, "comments"), orderBy("createdAt"))
+              );
+            // console.log(querySnapshot)
+            const ReplyData = []
+            querySnapshot.forEach((doc) => {
+                ReplyData.push(doc.data());
+                console.log(doc.data())
+            });
+            setReply(ReplyData)
+        } catch (error) {
+          console.error('Error fetching comments from Firestore:', error);
+        }
+      };
+      
+
+    fetchReply();
+  }, [newReply]);
+
   const handleAddComment = async () => {
     var username 
     var user_pfp
@@ -44,49 +70,62 @@ function Forum() {
     }
 
     try {
-        const commentsRef = collection(firestore, "comments")
-        console.log(commentsRef)
-        await addDoc(commentsRef, {
-            text: newComment,
-            createdAt: new Date(),
-            parentID: "",
-            username: username,
-            pfp: user_pfp,
-        });
+        if (newComment){
+            const commentsRef = collection(firestore, "comments")
+            // console.log(commentsRef)
+            await addDoc(commentsRef, {
+                text: newComment,
+                createdAt: new Date(),
+                parentID: "",
+                username: username,
+                pfp: user_pfp,
+            });
+        }
         setNewComment('');
         } catch (error) {
         console.error('Error adding comment to Firestore:', error);
         }
-    
   };
 
-  const replyComment = async (id) => {
-    var username 
-    var user_pfp
-    if (! userObject.name){
-        username = "Guest User"
-        user_pfp = ""
+  const replyComment = async (event) => {
+    var buttonId = event.target.id
+    var element = document.getElementById(buttonId)
+    var hidden = element.getAttribute("hidden")
+    
+    if (hidden || hidden === ""){
+        document.getElementById(buttonId).removeAttribute("hidden");
     }
     else{
-        username =  userObject.name
-        user_pfp =  userObject.picture
-    }
-
-    try {
-        const commentsRef = collection(firestore, "comments")
-        console.log(commentsRef)
-        await addDoc(commentsRef, {
-            text: newComment,
-            createdAt: new Date(),
-            parentID: "",
-            username: username,
-            pfp: user_pfp,
-        });
-        setNewComment('');
-        } catch (error) {
-        console.error('Error adding comment to Firestore:', error);
+        element.setAttribute("hidden", "hidden")
+        var username 
+        var user_pfp
+        if (! userObject.name){
+            username = "Guest User"
+            user_pfp = ""
+        }
+        else{
+            username =  userObject.name
+            user_pfp =  userObject.picture
         }
     
+        try {
+            if (newReply){
+                const ReplyRef = collection(firestore, "comments")
+                // console.log(commentsRef)
+                await addDoc(ReplyRef, {
+                    text: newReply,
+                    createdAt: new Date(),
+                    parentID: buttonId,
+                    username: username,
+                    pfp: user_pfp,
+                });
+                setNewReply('');
+            }
+
+            } catch (error) {
+            console.error('Error adding comment to Firestore:', error);
+            }
+    }
   };
   
 
@@ -105,14 +144,46 @@ function Forum() {
       </div>
       <div>
         {comments.map((comment) => (
-          <div key={comment.id} className='comment'>
-            <div className='user-info'>
-                <img src={comment.pfp} className="pfp"></img>
-                <p className='username'>{comment.username}</p>
+            <div key={comment.id}>
+                {! comment.parentID &&
+                    <div className='comments'>
+                        <div className='user-info'>
+                            <img src={comment.pfp} className="pfp"></img>
+                            <p className='username'>{comment.username}</p>
+                        </div>
+                        <p className='comment-box'>{comment.text}</p>
+                        <div className='reply-box'>
+                            <textarea className='reply-input-box'
+                                id={comment.createdAt} 
+                                rows="4"
+                                cols="50"
+                                placeholder="Add your Reply"
+                                hidden="hidden"
+                                value={newReply}
+                                onChange={(e) => setNewReply(e.target.value)}
+                            />
+                            <button onClick={replyComment} id={comment.createdAt} className='reply-button'>Reply</button>
+                        </div>
+                    </div>
+                }
+
+                {reply.map((reply) => (
+                    <div key={reply.id}>
+                        {reply.parentID == comment.createdAt &&
+                            <div className='replies'>
+                                <div className='User-info'>
+                                    <img src={reply.pfp} className="pfp"></img>
+                                    <p className='username'>{reply.username}</p>
+                                </div>
+                                <p className='comment-box'>{reply.text}</p>
+                            </div>
+                        }
+                    </div>
+                ))}
+                
+
+
             </div>
-            <p className='comment-box'>{comment.text}</p>
-            <button onClick={replyComment(comment.id)} className='reply-button'>Reply</button>
-          </div>
         ))}
       </div>
     </div>
