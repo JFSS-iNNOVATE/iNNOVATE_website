@@ -14,7 +14,7 @@ function Forum() {
             // console.log(querySnapshot)
             const commentsData = []
             querySnapshot.forEach((doc) => {
-                commentsData.push(doc.data().text);
+                commentsData.push(doc.data());
                 console.log(doc.data())
             });
             setComments(commentsData)
@@ -59,8 +59,8 @@ function Forum() {
       <div>
         {comments.map((comment) => (
           <div key={comment.id}>
-            <p>{comment}</p>
-            {/* <small>Posted at: {comment.createdAt.toDate().toLocaleString()}</small> */}
+            <p>{comment.text}</p>
+            <small>Posted at: {comment.createdAt.seconds}</small>
           </div>
         ))}
       </div>
