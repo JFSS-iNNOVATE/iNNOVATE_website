@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { firestore } from '../firebase'; // Adjust the path to your firebase.js file
 import { addDoc, collection, doc, getDoc, getDocs } from "firebase/firestore";
+import {userObject} from '../components/Navbar'
+import "../page-styles/Forum.css";
 
 function Forum() {
   const [comments, setComments] = useState([]);
@@ -28,39 +30,63 @@ function Forum() {
   }, [newComment]);
 
   const handleAddComment = async () => {
-    try {
-        console.log("Tried this")
-      const commentsRef = collection(firestore, "comments")
-      console.log(commentsRef)
-      await addDoc(commentsRef, {
-        text: newComment,
-        createdAt: new Date(),
-      });
-      setNewComment('');
-    } catch (error) {
-      console.error('Error adding comment to Firestore:', error);
+    if (! userObject.name){
+        function handleCallback(response) {
+            userObject = jwt_decode(response.credential)
+            console.log(userObject);
+            setUser(userObject);
+            document.getElementById("LoginDiv").hidden = true;
+        }
+
+        /* global google */
+        google.accounts.id.initialize({
+            client_id: "680968852601-6h8k53sd636mg9hfu2eqmvs8vjtg8skj.apps.googleusercontent.com",
+            callback: handleCallback
+        });
+
+        google.accounts.id.renderButton(
+            document.getElementById("LoginDiv"), 
+            {theme: "outline", size: "large"}
+        );
+
+        useGoogleLogin()
+    }
+    else{
+        try {
+            const commentsRef = collection(firestore, "comments")
+            console.log(commentsRef)
+            await addDoc(commentsRef, {
+              text: newComment,
+              createdAt: new Date(),
+              parentID: "",
+              username: userObject.name,
+              pfp: userObject.picture,
+            });
+            setNewComment('');
+          } catch (error) {
+            console.error('Error adding comment to Firestore:', error);
+          }
     }
   };
   
 
   return (
-    <div>
+    <div className='main-container'>
       <h1>Forum</h1>
       <div>
-        <textarea
+        <textarea className='input-box'
           rows="4"
           cols="50"
           placeholder="Add your comment"
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
         />
-        <button onClick={handleAddComment}>Add Comment</button>
+        <button onClick={handleAddComment} className='comment-button'>Add Comment</button>
       </div>
       <div>
         {comments.map((comment) => (
           <div key={comment.id}>
-            <p>{comment.text}</p>
-            <small>Posted at: {comment.createdAt.seconds}</small>
+            <p className='comment-box'>{comment.text}</p>
           </div>
         ))}
       </div>
