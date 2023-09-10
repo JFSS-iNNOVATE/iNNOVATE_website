@@ -78,3 +78,7 @@ body {
   width: 100px;
   object-fit: cover;
 }
+
+@media(max-width: 560px) {
+  
+}
