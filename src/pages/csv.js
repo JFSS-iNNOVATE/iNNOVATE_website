@@ -15,10 +15,10 @@ function read_csv(){
     .on('end', () => {
         console.log('CSV file successfully processed');
     });
+
 }
 
 /* ID,Name,Date,ChildID,ParentID,PFP,Comment */ 
-/* 1,Roy, 2023-09-09 14:09:00,,,,test */ 
 class Comment {
     constructor(id = "", username="", date="", child_id="", parent_id="", pfp="", comment="") {
         this.id = id;
@@ -40,7 +40,9 @@ class Comment {
     }
 }
 
-const startApp = () => {
-    const contact1 = new Comment("2", "Robert", "", "", "","","","");
-    contact1.saveAsCSV();
+const addRow = () => {
+    const row = new Comment("2", "Robert", "", "", "","","","");
+    row.saveAsCSV();
 }
+
+addRow();

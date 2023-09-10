@@ -14,6 +14,7 @@
     "inquirer": "^9.2.10",
     "json2csv": "^6.0.0-alpha.2",
     "jwt-decode": "^3.1.2",
+    "mysql": "^2.18.1",
     "papaparse": "^5.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -49,7 +50,8 @@
   "browser": {
     "fs": false,
     "path": false,
-    "os": false
+    "os": false,
+    "crypto": false
   },
   "description": "GitHub Pages: https://jfss-innovate.github.io/iNNOVATE_website/",
   "main": "index.js",
