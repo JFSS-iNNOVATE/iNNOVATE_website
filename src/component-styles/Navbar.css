@@ -30,12 +30,15 @@ body {
   gap: 3rem;
 }
 
+.nav ul li {
+  margin-top: 0px;
+}
+
 .nav a {
   color: inherit;
   text-decoration: none;
   font-family: "Exo", sans-serif;
   font-size: 1.25rem;
-  
 }
 
 .nav li:hover {
@@ -45,12 +48,18 @@ body {
 
 .google-login{
   padding: 0px;
+  width: 100px;
+  margin-top: -12px;
+  margin-bottom: -15px;
 }
 
 .pfp{
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
+  margin-top: -5px;
+  margin-bottom: -10px;
   border-radius: 100%;
+  margin-left: -45px;
 }
 
 .user-name{
@@ -59,16 +68,58 @@ body {
 
 .sign-out{
   padding: 0px;
-  height: 40px;
+  height: 20px;
   width: 120px;
   border: none;
   background-color: black;
   color: white;
   font-family: "Exo", sans-serif;
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: lighter;
+  margin-right: -15px;
+  margin-left: -40px;
 }
 
-.sign-out:active {
-  color: red;
+.sign-out:hover {
+  color: #fff;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.logo {
+  max-height: 55px;
+  width: 125px;
+  object-fit: cover;
+  margin-top: 5px;
+}
+
+/* Waffle Elements */
+
+.pfp2 {
+  margin-top: 15px;
+  height: 40px;
+  width: 40px;
+}
+
+.menu {
+  flex-direction: column;
+  text-align: right;
+}
+
+.menuList {
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.waffle {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  font-family: "Exo", sans-serif;
+  font-size: 1rem;
+}
+
+.google-login2 {
+  margin-left: -120px;
 }
