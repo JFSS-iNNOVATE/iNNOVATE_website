@@ -18,6 +18,7 @@ const Navbar = () => {
     function signOut() {
         setUser({});
         document.getElementById("LoginDiv").hidden = false;
+        window.location.reload();
     }
 
     useEffect(() => {
