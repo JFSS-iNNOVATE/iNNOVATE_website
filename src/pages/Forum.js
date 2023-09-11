@@ -163,7 +163,7 @@ function Forum() {
                 {! comment.parentID &&
                     <div className='comments'>
                         <div className='user-info'>
-                            <img src={comment.pfp} className="pfp"></img>
+                            <img src={comment.pfp} className="user-pfp"></img>
                             <p className='username'>{comment.username} &emsp;<span className='date-posted'>{formatDate(comment.createdAt)}</span></p>
                         </div>
                         <p className='comment-box'>{comment.text}</p>
@@ -188,7 +188,7 @@ function Forum() {
                         {reply.parentID == comment.createdAt &&
                             <div className='replies'>
                                 <div className='user-info'>
-                                    <img src={reply.pfp} className="pfp"></img>
+                                    <img src={reply.pfp} className="user-pfp"></img>
                                     <p className='username'>{reply.username} &emsp;<span className='date-posted'>{formatDate(reply.createdAt)}</span></p>
                                 </div>
                                 <p className='comment-box'>{reply.text}</p>
