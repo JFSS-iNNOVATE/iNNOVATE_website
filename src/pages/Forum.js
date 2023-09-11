@@ -154,7 +154,7 @@ function Forum() {
           placeholder="Add your comment"
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
-          maxLength={1024}
+          maxLength={512}
         />
         <button onClick={handleAddComment} className='comment-button' id="AddComment">Add Comment</button>
       </div>
@@ -177,7 +177,7 @@ function Forum() {
                                 hidden="hidden"
                                 value={newReply}
                                 onChange={(e) => setNewReply(e.target.value)}
-                                maxLength={1024}
+                                maxLength={512}
                             />
                             <button onClick={replyComment} id={comment.createdAt} className='reply-button'>Reply</button>
                         </div>
