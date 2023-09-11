@@ -20,7 +20,8 @@
     padding-bottom: 10px;
     height: 10vh;
     width: 75vw;
-    resize: none;
+    word-break: break-all;
+    white-space: normal;
 }
 
 .input-box{
