@@ -108,7 +108,6 @@ function Forum() {
             username =  userObject.name
             user_pfp =  userObject.picture
         }
-    
         try {
             if (newReply){
                 const ReplyRef = collection(firestore, "comments")
@@ -190,7 +189,7 @@ function Forum() {
                             <div className='replies'>
                                 <div className='user-info'>
                                     <img src={reply.pfp} className="pfp"></img>
-                                    <p className='username'>{comment.username} &emsp;<span className='date-posted'>{formatDate(comment.createdAt)}</span></p>
+                                    <p className='username'>{reply.username} &emsp;<span className='date-posted'>{formatDate(reply.createdAt)}</span></p>
                                 </div>
                                 <p className='comment-box'>{reply.text}</p>
                             </div>
