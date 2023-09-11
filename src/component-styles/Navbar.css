@@ -64,7 +64,6 @@ body {
 
 .user-name{
   padding: 0px;
-
 }
 
 .sign-out{
@@ -94,12 +93,33 @@ body {
   margin-top: 5px;
 }
 
+/* Waffle Elements */
+
+.pfp2 {
+  margin-top: 15px;
+  height: 40px;
+  width: 40px;
+}
+
 .menu {
   flex-direction: column;
+  text-align: right;
 }
 
 .menuList {
   flex-direction: column;
   margin: 0;
   padding: 0;
+}
+
+.waffle {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  font-family: "Exo", sans-serif;
+  font-size: 1rem;
+}
+
+.google-login2 {
+  margin-left: -120px;
 }

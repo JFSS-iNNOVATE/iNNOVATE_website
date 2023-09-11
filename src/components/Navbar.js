@@ -76,16 +76,16 @@ const Navbar = () => {
             <div className="logoContainer"><Link to="/"><img className="logo" src={iNNOVATELogo}/></Link></div>
             {isSmallScreen ? (
                 <ul className="menu">
-                <li><button onClick={navToggle}>☰</button></li>
+                <li><button className="waffle" onClick={navToggle}>☰</button></li>
                 {toggled == 1 && 
                 <li><ul className="menuList">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/Resources">Resources</Link></li>
                 <li><Link to="/Forum">Forums</Link></li>
-                <li><div className="google-login" id="LoginDiv"></div></li>
-                <li>{user.picture &&
+                <li><div className="google-login google-login2" id="LoginDiv"></div>
+                {user.picture &&
                     <div>
-                       <img src={user.picture} className="pfp"></img>
+                       <img src={user.picture} className="pfp pfp2"></img>
                     </div>
                 }</li>
                 <li>{Object.keys(user).length != 0 &&
