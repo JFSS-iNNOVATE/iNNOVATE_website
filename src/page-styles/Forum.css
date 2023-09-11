@@ -91,3 +91,9 @@
     font-size: 0.9rem;
     color: gray;
 }
+
+.user-pfp{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+  }
