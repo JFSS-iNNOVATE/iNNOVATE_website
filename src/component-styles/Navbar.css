@@ -79,7 +79,12 @@ body {
   font-weight: lighter;
   margin-right: -15px;
   margin-left: -40px;
+}
 
+.sign-out:hover {
+  color: #fff;
+  font-weight: normal;
+  cursor: pointer;
 }
 
 .logo {
