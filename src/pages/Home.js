@@ -21,7 +21,7 @@ const Home = () => {
             <div className="text">
                 <div className={data.Home["Our Mission"][0].type}>{data.Home["Our Mission"][0].content}</div>
                 <div className={data.Home["Our Mission"][1].type}>
-                Our mission is to inspire, educate, and empower the next generation of technology leaders. Through accessible materials, resources, and online sessions, our organisation aims to <span style={textBold}>iNNOVATE</span> students.
+                Our mission is to inspire, educate, and empower the next generation of technology leaders. We aim to assist schools to provide students with the most optimum experience in the realm of science and technology. Through accessible materials, resources, and online sessions, our organisation aims to <span style={textBold}>iNNOVATE</span> students.
                 </div>
             </div>
             <div className="mission-image">
@@ -39,14 +39,14 @@ const Home = () => {
                     <div className="subtitle-centered">Junior</div>
                     <div className="image-centered sized-image"><img src={juniorimg} alt="Junior Division" /></div>
                     <div className="description divisionText">Learn a programming language, 3D-modelling, and other tech savvy skills, for free by our trained mentors!</div>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeu9xpfmcuxoBJMSsA8PwJJtTBrjps26QavMhzXUSwst7YsQQ/viewform?usp=sf_link" target="_blank"><button class="button-31">Sign Up</button></a>
+                    <a href="https://classroom.google.com/c/NTI5NjU4NTkwNjMw?cjc=4wcnj3e" target="_blank"><button class="button-31">Join Now</button></a>
                 </div>
 
                 <div className="column">
                     <div className="subtitle-centered">Senior</div>
                     <div className="image-centered sized-image"><img src={seniorimg} alt="Senior Division" /></div>
                     <div className="description divisionText">Develop and strengthen essential tech skills required for the industry. Join us and stand out on post-secondary applications.</div>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScAZ7mSGm1qrndee_lVNOCgZIorNiZiQdhK814mXEDxdWTrvg/viewform?usp=sf_link" target="_blank"><button class="button-31">Sign Up</button></a>
+                    <button class="button-31">Coming Soon</button>
                 </div>
             </div>
         </div>
