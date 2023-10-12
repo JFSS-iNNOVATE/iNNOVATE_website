@@ -31,7 +31,7 @@ const Home = () => {
         <div className="divisionSection">
             <div className="subtitle-centered divisions">Divisions</div>
             <hr />
-            <div className="description descriptionWhite"><span style={textBold}>iNNOVATE</span> offers two divisions: Junior and Senior. Our Junior division consists of trained high school mentors to conduct free learning sessions with students grades 6-8 once a week. Our Senior division coaches high schoolers skills required for the technology industry.</div>
+            <div className="description descriptionWhite"><span style={textBold}>iNNOVATE</span> offers two divisions: Junior and Senior. Our Junior division consists of trained high school mentors to conduct free learning sessions with students grades 6-8 every Tuesday during lunch. Our Senior division coaches high schoolers skills required for the technology industry.</div>
         </div>
         <div className="homepage-section">
             <div className="columns">
