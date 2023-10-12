@@ -17,8 +17,10 @@ function Login(){
           {theme: "outline", size: "large"}
         );
       }, []);
-
     
+    useEffect(()=>{
+      window.location.reload();
+    })
     return (
         <div className="LoginPage">
             <div id="LoginDiv"></div>
