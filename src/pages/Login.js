@@ -18,9 +18,6 @@ function Login(){
         );
       }, []);
     
-    useEffect(()=>{
-      window.location.reload();
-    })
     return (
         <div className="LoginPage">
             <div id="LoginDiv"></div>
