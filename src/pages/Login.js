@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-function Login(){
+async function Login(){
     function handleCallback(response) {
         console.log("Encoded JWT ID token: " + response.credential);
       }
@@ -18,7 +18,6 @@ function Login(){
         );
       }, []);
 
-    
     return (
         <div className="LoginPage">
             <div id="LoginDiv"></div>
