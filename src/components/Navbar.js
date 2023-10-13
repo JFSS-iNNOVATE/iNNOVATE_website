@@ -44,21 +44,25 @@ const Navbar = () => {
     }
 
     useEffect(() => {
-        if (user.name) {
-            return;
+        async function Login() {
+            if (user.name) {
+                return;
+            }
+            /* global google */
+            google.accounts.id.initialize({
+                client_id: "680968852601-6h8k53sd636mg9hfu2eqmvs8vjtg8skj.apps.googleusercontent.com",
+                callback: handleCallback
+            });
+    
+            google.accounts.id.renderButton(
+                document.getElementById("LoginDiv"), 
+                {theme: "outline", size: "large"}
+            );
+    
+            google.accounts.id.prompt();
         }
-        /* global google */
-        google.accounts.id.initialize({
-            client_id: "680968852601-6h8k53sd636mg9hfu2eqmvs8vjtg8skj.apps.googleusercontent.com",
-            callback: handleCallback
-        });
 
-        google.accounts.id.renderButton(
-            document.getElementById("LoginDiv"), 
-            {theme: "outline", size: "large"}
-        );
-
-        google.accounts.id.prompt();
+        Login();
 
         const handleResize = () => {
             setIsSmallScreen(window.innerWidth <= 900);
