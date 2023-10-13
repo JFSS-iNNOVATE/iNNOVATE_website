@@ -18,34 +18,22 @@ const VideoColumn = ({ videoUrl, description, level }) => (
 
 const Resources = () => {
   return (
-    <div>
-      <div className='subtitle coming-soon'>COMING SOON</div>
-    </div>
-  );
-  // <div className="video-container">
+  
+  <div className="video-container">
     
-  //   <VideoColumn
-  //     videoUrl="https://www.youtube.com/embed/rfscVS0vtbw" 
-  //     description="Learn Python - Full Course for Beginners [Tutorial]"
-  //     level="Junior"
-  //   />
-  //   <VideoColumn
-  //     videoUrl="https://www.youtube.com/embed/rfscVS0vtbw"
-  //     description="Description for Video 2"
-  //     level="Junior"
-  //   />
-  //   <VideoColumn
-  //     videoUrl="https://www.youtube.com/embed/rfscVS0vtbw"
-  //     description="Description for Video 3"
-  //     level="Junior"
-  //   />
-  //   <VideoColumn
-  //     videoUrl="https://www.youtube.com/embed/rfscVS0vtbw"
-  //     description="Description for Video 3"
-  //     level="Junior"
-  //   />
-  //   <div className='spacer'></div>
-  // </div>
+    <VideoColumn
+      videoUrl="https://www.youtube.com/embed/7WxJEHfCeOE" 
+      description="Getting Started With Replit"
+      level="Junior"
+    />
+    <VideoColumn
+      videoUrl="https://www.youtube.com/embed/0dgUHi0IucA"
+      description="Intro to Python"
+      level="Junior"
+    />
+    <div className='spacer'></div>
+  </div>
+  );
   }
 
 export default Resources;
