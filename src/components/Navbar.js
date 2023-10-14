@@ -66,7 +66,7 @@ const Navbar = () => {
             return new Promise((resolve) => {
                 setTimeout(() => {
                   resolve('resolved');
-                }, 1000);
+                }, 2000);
             })
         }
 
