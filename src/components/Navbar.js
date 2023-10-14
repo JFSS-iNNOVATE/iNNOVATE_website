@@ -44,7 +44,9 @@ const Navbar = () => {
     }
 
     useEffect(() => {
-        async function Login() {
+        function Login() {
+
+
             if (user.name) {
                 return;
             }
@@ -60,9 +62,19 @@ const Navbar = () => {
             );
     
             google.accounts.id.prompt();
+
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                  resolve('resolved');
+                }, 1000);
+            })
         }
 
-        Login();
+        async function call() {
+            await Login();
+        }
+
+        call();
 
         const handleResize = () => {
             setIsSmallScreen(window.innerWidth <= 900);
