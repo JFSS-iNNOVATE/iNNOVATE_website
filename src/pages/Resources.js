@@ -31,6 +31,16 @@ const Resources = () => {
       description="Intro to Python"
       level="Junior"
     />
+    <VideoColumn
+      videoUrl="https://www.youtube.com/embed/fAFaPCDIYCY"
+      description="Python Loops"
+      level="Junior"
+    />
+    <VideoColumn
+      videoUrl="https://www.youtube.com/embed/zeq6Svm4-Es"
+      description="Python Lists & Functions"
+      level="Junior"
+    />
     <div className='spacer'></div>
   </div>
   );
