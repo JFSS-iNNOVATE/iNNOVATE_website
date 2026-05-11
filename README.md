@@ -1,2 +1,2 @@
 # Website Domain
-Domain: https://www.jfss-innovate.tech/ (currently down)
+Domain: https://www.jfss-innovate.tech/ (currently inactive)
